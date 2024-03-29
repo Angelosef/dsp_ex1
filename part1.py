@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import sounddevice as sd
+from scipy.io import wavfile
 
 # part1
 
@@ -77,4 +78,20 @@ plt.show()
 # 1.3
 # save tone_sequence.wav
 
+identification_number = np.array([0, 3, 1, 2, 1, 1, 1, 3])
+zero_padding = np.zeros(100)
 
+id_signal = np.array([])
+
+for digit in identification_number:
+    id_signal = np.concatenate((id_signal, tone[digit]))
+    id_signal = np.concatenate((id_signal, zero_padding))
+
+audio_id_signal = np.int16(id_signal)
+directory = 'part1_audio_files\\tone_sequence.wav'
+"""
+wavfile.write(directory, sampling_frequency, audio_id_signal)
+"""
+
+# 1.4
+# calculate fft of windowed signal
