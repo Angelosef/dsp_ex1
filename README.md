@@ -1,6 +1,6 @@
-# My Project
-
-This is a description of my project.
+# DSP 1st exercise
+This project has the code and the pdf for the
+first lab excercise in DSP (ntua - HMMY)
 
 ## Installation
 
@@ -15,3 +15,4 @@ This is a description of my project.
 
 1. Go to the `py_files` folder
 2. Run `python partX.py` where X = {1, 2, 3}
+3. the pdf is the file with name `ex1_explanation.pdf`
